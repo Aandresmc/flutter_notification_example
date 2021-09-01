@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'app/app.container.dart';
-import 'app/core/notification/push_notifications.dart';
+import 'app/services/push_notifications.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();

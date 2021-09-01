@@ -7,12 +7,12 @@ import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 class LocalNotificationService {
   static final FlutterLocalNotificationsPlugin _notificationsPlugin = FlutterLocalNotificationsPlugin();
 
-  static Future<void> initialize(GlobalKey<NavigatorState> navigatorKey) async {
+  static Future<void> initialize(BuildContext context) async {
     final InitializationSettings initializationSettings =
         InitializationSettings(android: AndroidInitializationSettings("@mipmap/ic_launcher"));
 
     _navigationWithData(Map<String, dynamic> map) {
-      navigatorKey.currentState?.pushNamed(map["route"], arguments: map);
+      Navigator.of(context).pushNamed(map["route"], arguments: map);
       // Navigator.pushNamed(context, route, arguments: );
     }
 
